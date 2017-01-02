@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>山夭夭新用户注册</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/drag.js"></script>
+    <style>
+        *{ margin: 0; padding: 0; }
+        body{ background: url("images/brobg7.jpg") no-repeat center center fixed; -webkit-background-size: cover;
+            -moz-background-size: cover; -o-background-size: cover; background-size: cover; position: absolute; top: 0;
+            bottom: 0; left: 0; right: 0;}
+        form{ font: 20px/25px "microsoft yahei"}
+        #regiNew{ width:600px; position:absolute; left:22%; top: 10%; cursor: move}
+        #regiTop{ font:600 30px/50px 'microsoft yahei'; color: deeppink}
+        .regiBody{ background: url("images/bg.jpg") no-repeat; background-size: cover}
+    </style>
+    <script>
+        $(function(){
+            var oNew=document.getElementById("regiNew");
+            var oTop=document.getElementById("regiTop");
+            drag(oNew,oTop);
+        });
+    </script>
+</head>
+<body>
+<div id="regiNew" class="panel panel-primary" >
+    <div id="regiTop" class="panel-heading">山夭夭新用户注册</div>
+    <div class="panel-body regiBody" >
+        <form action="/register" method="post">
+            昵称：<br><input type="text" name="email" placeholder="山夭夭..." class="form-control"><br>
+            密码：<br><input type="password" name="pwd" class="form-control"><br>
+            确认密码：<br><input type="password" name="pwd2" class="form-control"><br>
+            <input type="submit" value="立即注册" class="btn btn-primary">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>山夭夭聊天室</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/drag.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+<div class="background"></div>
+<!--第一部分：登录界面----登录可选择性别 ；点击注册：头像，性别，昵称，密码//《用户分析》-->
+<section id="welcome" class="loginBox">
+    <!--<div class="background"></div>-->
+    <div class="loginTop" id="loginTop"><a href="javascript:;">山夭夭聊天时间...</a></div>
+        <div class="loginBot">
+            <div class="iconMe">
+                <p><img src="images/icon7.jpg"></p>
+                <ul class="selIcon">
+                    <li><img src="images/icon1.jpg"></li>
+                    <li><img src="images/icon2.jpg"></li>
+                    <li><img src="images/icon3.jpg"></li>
+                    <li><img src="images/icon4.jpg"></li>
+                    <li><img src="images/icon5.jpg"></li>
+                    <li><img src="images/icon6.jpg"></li>
+                    <li><img src="images/icon7.jpg"></li>
+                    <li><img src="images/icon8.jpg"></li>
+                    <li><img src="images/icon9.jpg"></li>
+                    <li><img src="images/icon10.jpg"></li>
+                    <li><img src="images/icon11.jpg"></li>
+                    <li><img src="images/icon12.jpg"></li>
+                </ul>
+            </div>
+            <div class="infoMe">
+                <form action="login" method="post">
+                    <input id="nickname" type="text" name="username" placeholder="请输入昵称..."><br>
+                    <input type="password" name="userpwd"><br>
+                    <a id="startchat" class="btn btn-primary">登录</a>
+                    <a href="register.html" id="regischat" class="btn btn-primary">立即注册</a>
+                </form>
+
+            </div>
+            <div class="seleMe">
+                <form class="genderMe">
+                    <label><input type="radio" name="gender" checked="checked" value="男生"><span></span></label>
+                    <label><input type="radio" name="gender"  value="女生"><span></span></label>
+                </form>
+                <form class="statusMe">
+                    <label><input type="radio" name="status" checked="checked" value="在线"><span></span></label>
+                    <label><input type="radio" name="status" value="忙碌"><span></span></label>
+                </form>
+            </div>
+        </div>
+</section>
+
+<!--第二部分：聊天界面---登录之后进入聊天室-->
+<section class="chatRoom" id="chatroom">
+    <!--右上角点击关闭-->
+    <div class="closeC"><a href="#">×</a></div>
+    <!--左侧边栏  显示在线人数，性别，状态，私聊  实时更新-->
+    <div class="respect">
+        <div class="picTab">
+            <!--<img src="images/repect1.jpg">-->
+        </div>
+    </div>
+    <!--中间：对话内容  左右形式 显示性别-->
+    <div class="chatCont">
+        <div id="box" class="contBox">
+            <!--系统消息提示-->
+            <div id="messages"></div>
+        </div>
+        <!--聊天内容输入框-->
+        <textarea name="inputNews" id="message" class="inputNews" placeholder="说点什么呗..."></textarea>
+        <input class="sendBtn" type="button" id="send" value="发送">
+    </div>
+    <!--显示当前用户头像 昵称 离开 或者图片自动切换-->
+    <div class="currNum">
+        <div class="selfIcon"><img src="images/icon7.jpg"></div>
+        <div id="userNum">
+            <!--<div class="nowNum"></div>-->
+            <!--<div class="nowUser">-->
+                <!--<i><img src="images/icon8.jpg"></i>-->
+                <!--<span>昵称</span><br>-->
+                <!--<a href="javascript:;">[在线]</a>-->
+                <!--<a href="javascript:;">[私聊]</a>-->
+            <!--</div>-->
+        </div>
+        <button type="button" class="leaveBtn">离开聊天室</button>
+        <div class="timeNow"></div>
+    </div>
+</section>
+</body>
+</html>

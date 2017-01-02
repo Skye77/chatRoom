@@ -1,0 +1,87 @@
+*{ margin: 0; padding: 0;}
+ul{ list-style: none;}
+a{ text-decoration: none;}
+.background { background: url("../images/backChat.jpg") no-repeat center center fixed; -webkit-background-size: cover;
+    -moz-background-size: cover; -o-background-size: cover; background-size: cover; position: absolute; top: 0;
+    bottom: 0; left: 0; right: 0; }
+.loginBox{ height:500px; width:800px; border: 1px solid #999;position: fixed; top:5%; left:15%; border-radius: 5px;
+    box-shadow: 0 0 10px 0 #333; background:url("../images/bg20.jpg") no-repeat; background-size: cover;opacity: 0.8}
+.loginTop{ height: 200px;cursor: move }
+.loginTop a{ position: relative; font: 60px/100px "microsoft yahei"; color:deeppink;top:60px; left: 30px;}
+.loginBot{ height: 220px; padding-top:70px; padding-left:25px; }
+.iconMe{ float: left; height: 200px; width: 200px; border-radius: 50%;position: relative; cursor: pointer;
+    opacity: 0.9; filter: alpha(opacity=90);}
+.iconMe p{ height: 100%; width: 100%;}
+.iconMe img,.selIcon li img{ width: 100%; height: 100%; border-radius: 50%}
+.selIcon{ height: 330px; width: 440px; background:#E2BF46; border-radius: 5px; position: relative;left:-100px;
+    top:20px; display: none;}
+.selIcon:after{ content: "";height: 0; width: 0; border: 20px solid transparent; border-bottom-color:#E2BF46;
+    position: absolute; left:40%; top:-40px; }
+.selIcon li{ float: left; height: 96px; width: 96px; margin:5px; border:2px solid #fff;border-radius: 50%;}
+.infoMe{ float:left; height: 200px; width: 300px; margin-left:40px;margin-top:10px; }
+#welcome .infoMe input{ height:50px; width:280px; border: 1px solid #ccc; margin: 10px;
+    font: 16px/50px "microsoft yahei"; border-radius:3px;}
+.infoMe .btn{ font:500 18px "simsun"; margin-left:45px; margin-top:10px;}
+.seleMe{ float: left; height: 200px; width: 200px; }
+.genderMe,.statusMe{ height: 50px; width:100%;margin-bottom: 20px;
+    font: 18px/50px "microsoft yahei";}
+#welcome .seleMe input{ margin-left: 20px;}
+#welcome .seleMe label span{display: inline-block; height: 50px; width: 50px; border-radius: 50%;
+    background: url("../images/nan.jpg") no-repeat; margin-left:8px; position: relative; top:15px;}
+#welcome .seleMe label:nth-child(2) span{ background: url("../images/nv.jpg") no-repeat;}
+#welcome .statusMe label span{ background: url("../images/zaixian.jpg") no-repeat;}
+#welcome .statusMe label:nth-child(2) span{ background: url("../images/manglu.jpg") no-repeat;}
+
+.chatRoom{ height:610px; width:890px; position: fixed; left:43%; top:5%; border-radius: 5px; margin-left: -460px;
+    box-shadow: 0 0 20px 0 #333;background:url("../images/contbox.jpg") no-repeat; opacity:1; background-size: cover;
+    padding:30px 20px;}
+.currNum,.chatCont,.respect{ float: left; height: 540px; border: 1px solid #666; border-radius: 3px; box-shadow: 0 0 5px 0 #333;}
+.currNum{  width:150px;overflow: hidden }
+.picTab{ width:100%; height:100%; background: url("../images/pictab1.jpg") no-repeat center top;
+    background-size:cover; }
+.respect{  width: 180px;}
+.chatCont{ width: 500px; position: relative;margin: 0 10px;}
+.contBox{ height: 400px; width:500px; overflow: auto;}
+.inputNews{ height: 137px; width:100%; resize:none; border:none;border-top: 1px solid #666;padding-top:5px;
+    font:20px/25px "simsun";z-index: 20}
+.closeC a{ position: absolute; height: 25px; width: 25px; background-color:purple; color: #fff;
+    border-radius: 50%; font-size: 25px; line-height: 25px; text-align: center;text-decoration: none;
+    right: -9px; top: -9px;}
+.sendBtn{ position: absolute; right: 10px; bottom: 10px; height:30px; width:80px; background-color:purple;text-align: center;
+    font: 18px/30px "microsoft yahei"; color: #fff; border:none; border-radius:3px;}
+.loginMsg span { height:20px; display:block; color: green; text-align: center; font-weight: 600; margin:10px 0;}
+.loginMsg{ min-height: 20px; width:100%; }
+.selfMsg,.userMsg{ min-height:40px; width:100%; margin:5px 0;clear: both; position: relative;}
+.selfMsg i,.userMsg i{ display:block; height:40px; width:40px; border-radius: 50%;line-height: 40px;
+    position: absolute;  top:10px;}
+.userMsg i s{ text-decoration: none; position: absolute;left:10px ;top:-23px; font-size: 12px;
+    font-style: normal}
+.selfMsg i{ right: 10px;}
+.selfMsg i img,.userMsg i img{ width: 100%; height: 100%; border-radius: 50%;}
+.userMsg i{ left: 10px;}
+.selfMsg span,.userMsg span{ padding: 10px;max-width:250px;min-height: 40px;border-radius:3px;
+    word-break: break-all ;display: block;margin:5px 0; position:relative;min-width:50px;}
+.selfMsg span{ background:yellowgreen; color:#fff;clear: both; margin-right:60px;float: right;}
+.userMsg span { background:#C2CCD1; color:#000;float: left;clear: both; margin-left:60px;}
+.selfMsg span:after,.userMsg span:after{ content: "";height: 0; width: 0; border:8px solid transparent;
+    position: absolute; top: 20%; }
+.selfMsg span:after{ border-left-color:yellowgreen;  right: -16px;}
+.userMsg span:after{ border-right-color:#C2CCD1; left: -16px; }
+
+.selfIcon{ height: 100px; width: 100px; border-radius: 50%;margin: 20px 15px;cursor: pointer;
+    transition: all 0.6s}
+.selfIcon img,.nowUser i img{ width:100%; height:100%;border-radius: 50%;}
+.selfIcon:hover,.nowUser i:hover{ transform: scale(1.2);}
+#userNum{ max-height:205px;overflow: auto}
+.nowNum{ text-align: center;font:600 16px/30px "microsoft yahei";margin-bottom:5px;color:deeppink;}
+.nowUser{ height:50px;margin-bottom: 5px;}
+.nowUser i{ display: inline-block; height:30px; width:30px;border-radius: 50%;transition: all 0.6s}
+.nowUser span{ display:inline-block;font: 14px "microsoft yahei";position: relative;left:8px;
+    width:55px;height:20px; overflow: hidden;}
+.nowUser .alone{ position: relative; left:45px; top: -50px;color: teal}
+.nowUser .addStatu{ position: relative; left:90px;width:40px;text-align: center;top: -30px;color: teal}
+.nowUser .addStatu a{ display: block;color: teal}
+.nowUser .addStatu img{ width: 25px; height: 25px;margin-right: 5px;}
+.leaveBtn{ height: 30px; width: 80px; background-color: #006dcc; border:none;margin:20px 35px;
+    border-radius: 4px;font:600 14px/30px "microsoft yahei"; color: #fff;}
+.timeNow{ text-align: center; font:800 16px/30px "microsoft yahei";color: teal}
